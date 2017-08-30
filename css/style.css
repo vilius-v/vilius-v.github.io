@@ -30,7 +30,8 @@ body {
 
 .header .wrapper .col-left {
     width: 40%;
-    margin-right: 0.5em;
+    margin-right: 0.75em;
+    margin-left: auto;
     color: white;
 }
 
@@ -42,14 +43,15 @@ body {
 }
 
 .header .wrapper .col-left h1 {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1.8vw;
 }
 
 .header .wrapper .col-left h4 {
-    font-size: 1.2vw;
     font-weight: normal;
+    font-size: 1.1vw;
     padding-top: 1.1em;
+    color: #269186;
 }
 
 .header .wrapper .col-left img {
@@ -60,7 +62,8 @@ body {
 }
 
 .header .wrapper .col-right {
-    margin-left: 0.5em;
+    margin-left: 0.75em;
+    margin-right: auto;
     background-color: #063440;
     color: #839496;
     font-family: default-mono;
@@ -104,12 +107,11 @@ body {
     color: #586e75;
     text-decoration: none;
     
-    /* Transition Support for all browsers */
+    /* Transition support for all browsers */
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
-
 }
 
 .menu .items label:hover {
@@ -130,24 +132,63 @@ body {
     color: white;
 }
 
+/* Resizes menu according to window size */
+@media (max-width: 63em) {
+    /* Removes entire right column */
+    .header .wrapper .col-right {
+        display: none;    
+    }
+    /* Removes left column image */
+    .header .wrapper .col-left img {
+        display: none;
+    }
+    /* Resizes header padding to make left column bigger */
+    .header {
+        padding: 1.5vw 0;
+    }
+    /* Centers left column */
+    .header .wrapper .col-left {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    /* Changes title styles */
+    .header .wrapper .col-left h1 {
+        font-size: 2.5vw;
+    }
+    .header .wrapper .col-left h4 {
+        padding-top: 0.25em;
+        font-size: 1.5vw;
+    }
+    
+    /* Changes menu items to scale */
+    .menu .items label {
+        font-size: 1.5vw;
+    }
+    
+    /* Adds transition effect for text resizing */
+    .header .wrapper .col-left h1, 
+    .header .wrapper .col-left h4 {
+        -webkit-transition: font-size 0.25s linear;
+        -moz-transition: font-size 0.25s linear;
+        -o-transition: font-size 0.25s linear;
+        transition: font-size 0.25s linear;
+    }
+}
+
 
 /* CONTENT */
+
 #about:checked ~ .about-content, 
 #projects:checked ~ .projects-content, 
 #contact:checked ~ .contact-content {
-    display: block;
-}
-
-.content {
-    width: 75%;
-    margin: auto;
-    margin-top: 2em;
-    font-family: default-text;
+    opacity: 100;
 }
 
 .about-content, .projects-content, .contact-content {
     width: 150%;
-    display: none;
+    /* Use opacity instead of 'display: none' so that CSS transitions work */
+    opacity: 0;   
     position: absolute;
     left: -25%;
     top: 150%;
@@ -155,4 +196,9 @@ body {
     font-family: default-text;
     text-align: justify;
     
+    /* Adds transitions between content changes */
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
 }
