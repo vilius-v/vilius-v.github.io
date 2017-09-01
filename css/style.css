@@ -8,69 +8,72 @@
 }
 
 body { 
-    margin: 0; 
+    margin: 0;
+    /* To place footer in a sticky fashion at the bottom */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* HEADER */
 
-.header {
+header {
     width: 50%;
     margin: 0 auto;
     padding: 2em 0;
     background-color: #063440;
 } 
 
-.header .wrapper {
+header .wrapper {
     display: flex;
     flex-flow: row nowrap;
     width: 80%;
     margin: 0 auto;
 }
 
-.header .wrapper .col-left {
+header .wrapper .col-left {
     width: 40%;
-    margin-right: 0.75em;
-    margin-left: auto;
+    margin: auto;
+    margin-right: 1.5em;
     color: white;
 }
 
-.header .wrapper .col-left h1, h4{
+header .wrapper .col-left h1, h4{
     padding: 0;
     margin: 0;
     text-align: center;
     font-family: default-mono;
 }
 
-.header .wrapper .col-left h1 {
+header .wrapper .col-left h1 {
     font-weight: normal;
     font-size: 1.8vw;
 }
 
-.header .wrapper .col-left h4 {
+header .wrapper .col-left h4 {
     font-weight: normal;
     font-size: 1.1vw;
     padding-top: 1.1em;
     color: #269186;
 }
 
-.header .wrapper .col-left img {
+header .wrapper .col-left img {
     display: block;
     margin: auto;
     padding-top: 1.5em;
     max-width: 80%;
 }
 
-.header .wrapper .col-right {
-    margin-left: 0.75em;
-    margin-right: auto;
+header .wrapper .col-right {
+    margin: auto;
     background-color: #063440;
     color: #839496;
     font-family: default-mono;
     font-size: 1vw;
 }
 
-.header .wrapper .col-right p {
+header .wrapper .col-right p {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 2em;
@@ -79,8 +82,7 @@ body {
 
 /* MENU */
 
-.menu {
-    position: relative;
+nav {
     margin: auto;
     width: 50%;
     background-color: #002b36;
@@ -88,7 +90,7 @@ body {
     border-bottom-right-radius: 0.4em;
 }
 
-.menu .items {
+nav .items {
     width: auto;
     max-width: 75%;
     display: flex;
@@ -96,7 +98,7 @@ body {
     margin: auto;
 }
 
-.menu .items label {
+nav .items label {
     justify-content: center;
     margin: 0 auto;
     padding: 1.1em 1em;
@@ -114,7 +116,7 @@ body {
     transition: all 0.25s ease;
 }
 
-.menu .items label:hover {
+nav .items label:hover {
     background-color: #063440;
     color: 	#93a1a1;
 }
@@ -122,12 +124,14 @@ body {
 
 /* MENU NAVIGATION */
 
-.menu .items input[type=radio] {
+input[type=radio] {
     display: none;
 }
 
 /* Set active (selected) menu using radio button trick */
-#about:checked + label, #projects:checked + label, #contact:checked + label { 
+#about-radio:checked ~ nav .items .about, 
+#projects-radio:checked ~ nav .items .projects,
+#contact-radio:checked ~ nav .items .contact { 
     background-color: #063440;
     color: white;
 }
@@ -135,40 +139,40 @@ body {
 /* Resizes menu according to window size */
 @media (max-width: 63em) {
     /* Removes entire right column */
-    .header .wrapper .col-right {
+    header .wrapper .col-right {
         display: none;    
     }
     /* Removes left column image */
-    .header .wrapper .col-left img {
+    header .wrapper .col-left img {
         display: none;
     }
     /* Resizes header padding to make left column bigger */
-    .header {
+    header {
         padding: 1.5vw 0;
     }
     /* Centers left column */
-    .header .wrapper .col-left {
+    header .wrapper .col-left {
         width: 100%;
         display: block;
         margin: auto;
     }
     /* Changes title styles */
-    .header .wrapper .col-left h1 {
+    header .wrapper .col-left h1 {
         font-size: 2.5vw;
     }
-    .header .wrapper .col-left h4 {
+    header .wrapper .col-left h4 {
         padding-top: 0.25em;
         font-size: 1.5vw;
     }
     
     /* Changes menu items to scale */
-    .menu .items label {
+    nav .items label {
         font-size: 1.5vw;
     }
     
     /* Adds transition effect for text resizing */
-    .header .wrapper .col-left h1, 
-    .header .wrapper .col-left h4 {
+    header .wrapper .col-left h1, 
+    header .wrapper .col-left h4 {
         -webkit-transition: font-size 0.25s linear;
         -moz-transition: font-size 0.25s linear;
         -o-transition: font-size 0.25s linear;
@@ -179,26 +183,51 @@ body {
 
 /* CONTENT */
 
-#about:checked ~ .about-content, 
-#projects:checked ~ .projects-content, 
-#contact:checked ~ .contact-content {
+main {
+    /* Pushes footer down to bottom of page */
+    flex: 1;
+}
+
+/* Show when checked */
+#about-radio:checked ~ main .about, 
+#projects-radio:checked ~ main .projects, 
+#contact-radio:checked ~ main .contact {
+    position: relative;
+    top: 0;
     opacity: 100;
 }
 
-.about-content, .projects-content, .contact-content {
-    width: 150%;
-    /* Use opacity instead of 'display: none' so that CSS transitions work */
-    opacity: 0;   
+main .content {
+    /* Hide content by default */
     position: absolute;
-    left: -25%;
-    top: 150%;
+    top: -1000em;
+    /*Use opacity instead of 'display: none' so that CSS transitions work */
+    opacity: 0;
+
+    margin: 2em auto;
+    width: 75%;
     background-color: white;
     font-family: default-text;
     text-align: justify;
+    color: black;
     
     /* Adds transitions between content changes */
     -webkit-transition: opacity 0.25s linear;
     -moz-transition: opacity 0.25s linear;
     -o-transition: opacity 0.25s linear;
     transition: opacity 0.25s linear;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 0.75em 0;
+    background-color: #063440; 
+}
+
+footer p {
+    margin: 0;
+    font-family: default-mono;
+    text-align: center;
+    color: #839496;
 }
