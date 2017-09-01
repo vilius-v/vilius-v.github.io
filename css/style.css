@@ -7,6 +7,10 @@
     src: url('../fonts/arvo_regular.ttf');
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body { 
     margin: 0;
     /* To place footer in a sticky fashion at the bottom */
@@ -216,6 +220,34 @@ main .content {
     -moz-transition: opacity 0.25s linear;
     -o-transition: opacity 0.25s linear;
     transition: opacity 0.25s linear;
+}
+
+main .contact .personal a {
+    color: #269186;
+    text-decoration: none;
+}
+
+main .contact .personal a:hover {
+    text-decoration: underline;
+}
+
+main .contact .links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-top: 1px solid #536871;
+    margin-top: 3em;
+    padding-top: 2em;
+    
+}
+
+main .contact .links a {
+    text-decoration: none;
+}
+
+main .contact .links img {
+    margin: 0.5em 2em;
+    height: 64px;
 }
 
 
