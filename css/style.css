@@ -23,7 +23,7 @@ body {
 /* HEADER */
 
 header {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     padding: 2em 0;
     background-color: #063440;
@@ -52,12 +52,12 @@ header .wrapper .col-left h1, h4{
 
 header .wrapper .col-left h1 {
     font-weight: normal;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 }
 
 header .wrapper .col-left h4 {
     font-weight: normal;
-    font-size: 1.1vw;
+    font-size: 1vw;
     padding-top: 1.1em;
     color: #269186;
 }
@@ -74,7 +74,7 @@ header .wrapper .col-right {
     background-color: #063440;
     color: #839496;
     font-family: default-mono;
-    font-size: 1vw;
+    font-size: 0.8vw;
 }
 
 header .wrapper .col-right p {
@@ -88,7 +88,7 @@ header .wrapper .col-right p {
 
 nav {
     margin: auto;
-    width: 50%;
+    width: 40%;
     background-color: #002b36;
     border-bottom-left-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
@@ -98,7 +98,7 @@ nav .items {
     width: auto;
     max-width: 75%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin: auto;
 }
 
@@ -141,7 +141,10 @@ input[type=radio] {
 }
 
 /* Resizes menu according to window size */
-@media (max-width: 63em) {
+@media (max-width: 70em) {
+    header {
+        width: 65%;
+    }
     /* Removes entire right column */
     header .wrapper .col-right {
         display: none;    
@@ -152,7 +155,7 @@ input[type=radio] {
     }
     /* Resizes header padding to make left column bigger */
     header {
-        padding: 1.5vw 0;
+        padding: 1.2em 0;
     }
     /* Centers left column */
     header .wrapper .col-left {
@@ -162,16 +165,37 @@ input[type=radio] {
     }
     /* Changes title styles */
     header .wrapper .col-left h1 {
-        font-size: 2.5vw;
+        font-size: 1.6em;
     }
     header .wrapper .col-left h4 {
-        padding-top: 0.25em;
-        font-size: 1.5vw;
+        padding-top: 0.5em;
+        font-size: 0.8em;
     }
     
-    /* Changes menu items to scale */
+    /* Changes nav items to scale */
+    nav {
+        width: 65%;
+    }
+    nav .items {
+        max-width: 90%;
+    }
     nav .items label {
-        font-size: 1.5vw;
+        font-size: 1.1em;
+    }
+    
+    /* Changes about content on resize */
+    main .about .bio {
+        float: none !important;
+        display: block !important;
+        margin: auto !important;
+        margin-bottom: 2em !important;
+    }
+    main .about .bio .bio-footer {
+        display: none;
+    }
+    main .about .bio img {
+        border-bottom-left-radius: 0.4em;
+        border-bottom-right-radius: 0.4em;
     }
     
     /* Adds transition effect for text resizing */
@@ -209,10 +233,10 @@ main .content {
     opacity: 0;
 
     margin: 2em auto;
-    width: 75%;
+    width: 65%;
     background-color: white;
     font-family: default-text;
-    text-align: justify;
+    //text-align: justify;
     color: black;
     
     /* Adds transitions between content changes */
@@ -222,13 +246,43 @@ main .content {
     transition: opacity 0.25s linear;
 }
 
-main .contact .personal a {
+main .content a {
     color: #269186;
     text-decoration: none;
 }
 
-main .contact .personal a:hover {
+main .content a:hover {
     text-decoration: underline;
+}
+
+
+main .about .bio {
+    width: 40vw;
+    max-width: 300px;
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 0.8em;
+}
+
+main .about .bio img {
+    width: 100%;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+}
+
+main .about .bio .bio-footer {
+    background-color: #063440;
+    font-family: default-mono;
+    text-align: left;
+    font-size: 0.8em;
+    color: #839496;
+    padding: 1em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+}
+
+main .about .bio .bio-footer p {
+    margin: 0;
 }
 
 main .contact .links {
