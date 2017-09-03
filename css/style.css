@@ -243,10 +243,10 @@ main .contact .links {
 
 main .contact .links a {
     text-decoration: none;
+    margin: 0.5em 1.5em 2em;
 }
 
 main .contact .links img {
-    margin: 0.5em 2em;
     height: 64px;
 }
 
