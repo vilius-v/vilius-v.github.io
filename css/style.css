@@ -285,6 +285,56 @@ main .about .bio .bio-footer p {
     margin: 0;
 }
 
+main .projects .proj-item {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 5em;
+    border-bottom: 1px solid #536871;
+}
+
+main .projects .proj-item .proj-icon {
+    width: 25%;
+}
+
+main .projects .proj-item .proj-icon img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 256px;
+}
+
+main .projects .proj-item .proj-desc {
+    width: 75%;
+    margin-left: 2em;
+}
+
+main .projects .proj-item .proj-desc h2 {
+    color: #bb3700;
+}
+
+main .projects .proj-item .proj-desc h1 {
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+main .projects .proj-item .proj-desc .lang {
+    color: #a57800;
+}
+
+main .projects .proj-item .proj-desc p {
+    margin: 1.5em 0 0 0;
+}
+
+main .projects .proj-item .proj-desc ul {
+    margin: 0.5em 0;
+}
+
+main .projects .last {
+    margin-bottom: 0em;
+    border: none;
+}
+
 main .contact .links {
     display: flex;
     flex-flow: row wrap;
