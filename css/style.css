@@ -126,7 +126,7 @@ nav .items label:hover {
 }
 
 
-/* MENU NAVIGATION */
+/* MENU NAVIGATION  & RESPONSIVE CSS */
 
 input[type=radio] {
     display: none;
@@ -143,7 +143,7 @@ input[type=radio] {
 /* Resizes menu according to window size */
 @media (max-width: 70em) {
     header {
-        width: 65%;
+        width: 100%;
     }
     /* Removes entire right column */
     header .wrapper .col-right {
@@ -172,15 +172,20 @@ input[type=radio] {
         font-size: 0.8em;
     }
     
-    /* Changes nav items to scale */
+    /* Changes nav items on resize */
     nav {
-        width: 65%;
+        width: 100%;
     }
     nav .items {
         max-width: 90%;
     }
     nav .items label {
         font-size: 1.1em;
+    }
+    
+    /* Changes content width on resize */
+    main .content {
+        width: 95% !important;
     }
     
     /* Changes about content on resize */
@@ -198,13 +203,13 @@ input[type=radio] {
         border-bottom-right-radius: 0.4em;
     }
     
-    /* Adds transition effect for text resizing */
-    header .wrapper .col-left h1, 
-    header .wrapper .col-left h4 {
-        -webkit-transition: font-size 0.25s linear;
-        -moz-transition: font-size 0.25s linear;
-        -o-transition: font-size 0.25s linear;
-        transition: font-size 0.25s linear;
+    /* Changes projects content on resize */
+    main .projects .proj-item .proj-icon {
+        display: none;
+    }
+    main .projects .proj-item .proj-desc {
+        width: 100% !important;
+        margin: 0 !important;
     }
 }
 
@@ -236,7 +241,7 @@ main .content {
     width: 65%;
     background-color: white;
     font-family: default-text;
-    //text-align: justify;
+    text-align: justify;
     color: black;
     
     /* Adds transitions between content changes */
@@ -314,12 +319,14 @@ main .projects .proj-item .proj-desc {
 main .projects .proj-item .proj-desc h2 {
     color: #bb3700;
     margin-top: 0;
+    text-align: left;
 }
 
 main .projects .proj-item .proj-desc h1 {
     font-weight: normal;
     font-size: 1em;
     margin: 0.5em 0;
+    text-align: left;
 }
 
 main .projects .proj-item .proj-desc .lang {
@@ -335,7 +342,8 @@ main .projects .proj-item .proj-desc ul {
 }
 
 main .projects .last {
-    margin-bottom: 0em;
+    margin-bottom: 0;
+    padding-bottom: 0;
     border: none;
 }
 
