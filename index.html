@@ -123,27 +123,30 @@
                     <div class="proj-desc">
                         <h2>Absolute Value Detector for Neural Spike Sorting</h2>
                         <h1>GitHub Link: 
-                            <a href="https://github.com/vilius-v/neural">
-                            https://github.com/vilius-v/neural
+                            <a href="https://github.com/vilius-v/Neural" target="_blank">
+                            https://github.com/vilius-v/Neural
                             </a>
                         </h1>
                         <h1>Tools Used:
                             <span class="lang">Cadence Virtuoso Layout Suite</span>
                         </h1>
-                        <h1>Time Period: November 2016 - December 2016</h1>
-                        <p>The goal of this project was to design a physical 6-bit absolute
+                        <h1>Time Period: February 2017 - March 2017</h1>
+                        <p>
+                        The goal of this project was to design a physical 6-bit absolute
                         value detector with a worst case delay of 1 nanosecond and 
                         minimum energy. Only static logic (pass-transistor or CMOS) 
                         was allowed. Here is the final
-                        <a href="projects/neural/report.pdf">report</a>
+                        <a href="projects/neural/report.pdf" target="_blank">report</a>
                         and the full list of the 
-                        <a href="projects/neural/spec.pdf">requirements</a>. 
+                        <a href="projects/neural/spec.pdf" target="_blank">requirements</a>. 
                         The three most important features of the design are:
+                        </p>
                         <ul>
                             <li>Elimination of the need for separate adder (to create |x|)</li>
                             <li>Carry look-ahead logic combines absolute value and comparator into one stage</li>
                             <li>Efficient, high-level design minimized transistor count</li>
                         </ul>
+                        <p>
                         This project taught me about CMOS logic design, implementation, and
                         optimization in addition to valuable experience with industry
                         software and general techniques associated with digital electronic
@@ -153,86 +156,132 @@
                 </section>
                 
                 <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
+                    <div class="proj-icon">
+                        <img src="img/projects/coffee.png" style="background: gray;">
+                    </div>
                     <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
+                        <h2>Coffee Vending</h2>
+                        <h1>Tools Used:
+                            <span class="lang">Python, Rasberry Pi</span>
+                        </h1>
+                        <h1>Time Period: May 2017 - June 2017</h1>
+                        <p>
+                        An attempt to create a cold brew coffee dispenser using a
+                        Raspberry Pi, a personal mini-fridge, and a custom loop cooling
+                        device to cost-effectively serve coffee. This was a joint 
+                        software and hardware solution, combining valves with control 
+                        switches to release coffee on a credit card swipe. Created a 
+                        fully working prototype which measured flow rate and calculated
+                        the cost based on current volume dispensed.
+                        </p> 
                     </div>
                 </section>
                 
                 <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
+                    <div class="proj-icon">
+                        <img src="img/projects/qmusic.png">
+                    </div>
                     <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
+                        <h2>QMusic</h2>
+                        <h1>GitHub Link: 
+                            <a href="https://github.com/vilius-v/qmusic" target="_blank">
+                            https://github.com/vilius-v/qmusic
+                            </a>
+                        </h1>
+                        <h1>Tools Used:
+                            <span class="lang">Go, JavaScript, HTML, CSS</span>
+                        </h1>
+                        <h1>Time Period: September 2016 - November 2016</h1>
+                        <p>
+                        A web app created to help college students share music easily 
+                        and conveniently. This web app uses a combination of JS and Go 
+                        to integrate with the <b>Spotify API</b> and provide a web page 
+                        front-end for users to interact with. It allows for a single host 
+                        to share a "party" code, linked to his or her Spotify playlist, 
+                        which enables all friends with a code to add music to the host's 
+                        Spotify account. 
+                        </p>
+                        <p>
+                        This is currently a feature not supported by Spotify itself - 
+                        Spotify requires a person to have a registered
+                        account in order to edit playlists. This app hides the host's 
+                        credentials from other users but internally uses the host account 
+                        to add all music to the desired Spotify playlist.
+                        </p> 
                     </div>
                 </section>
                 
                 <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
+                    <div class="proj-icon">
+                        <img src="img/projects/algae.png">
+                    </div>
                     <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
+                        <h2>Research: Toxic Algae Monitoring w/ Digital Holography</h2>
+                        <h1>Tools Used:
+                            <span class="lang">C++, QT Framework, Matlab</span>
+                        </h1>
+                        <h1>Time Period: November 2016 - June 2017</h1>
+                        <p>
+                        A research project sponsored by HHMI Research Group. My group was
+                        tasked with investigating toxic algae. Our approach was to use
+                        <a href="https://en.wikipedia.org/wiki/Digital_holography" target="_blank">
+                        digital holography
+                        </a>
+                        to reconstruct and identify, in real-time, floating algae particles
+                        in a current. We achieved a throughput of 100mL per hour at 3 
+                        frames per second. The main algorithm had four steps:
+                        </p>
+                        <ul>
+                            <li>Background subtraction</li>
+                            <li>Segmentation of detected objects</li>
+                            <li>Auto-focus and reconstruction</li>
+                            <li>Display identified objects</li>
+                        </ul>
+                        <p>
+                        My main contributions were helping with the algorithm and image
+                        processing, as well as creating a QT front-end application. Here
+                        is a link to the final 
+                        <a href="projects/algae/presentation.pdf" target="_blank">
+                        presentation
+                        </a>.
+                        </p>
                     </div>
                 </section>
                 
                 <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
-                    <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
+                    <div class="proj-icon">
+                        <img src="img/projects/server.png" style="background: black;">
                     </div>
-                </section>
-                
-                <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
                     <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
-                    </div>
-                </section>
-                
-                <section class="proj-item">
-                    <img src="img/projects/placeholder.png">
-                    <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
-                    </div>
-                </section>
-                
-                <section class="proj-item last">
-                    <img src="img/projects/placeholder.png">
-                    <div class="proj-desc">
-                        <h2>Project Title</h2>
-                        <h1>GitHub Link:</h1>
-                        <h1>Languages Used: <span class="lang">C++</span></h1>
-                        <h1>Time Period: </h1>
-                        <h1>Details:</h1>
-                        <p>dsadasdasdsddsadds</p>
+                        <h2>Simple HTTP Client and Server</h2>
+                        <h1>GitHub Link: 
+                            <a href="https://github.com/vilius-v/SimpleHTTP" target="_blank">
+                            https://github.com/vilius-v/SimpleHTTP
+                            </a>
+                        </h1>
+                        <h1>Tools Used:
+                            <span class="lang">C++</span>
+                        </h1>
+                        <h1>Time Period: May 2016</h1>
+                        <p>
+                        The aim of this project was to construct a web client 
+                        that supports sending HTTP/1.0 GET requests and parsing 
+                        HTTP/1.0 responses, as well as a HTTP Web Server that 
+                        supports parsing HTTP/1.0 GET requests and sending HTTP/1.0
+                        responses. 
+                        </p>
+                        <p>
+                        The design consists of the following three layers:</p>
+                        <ul>
+                            <li>Obtaining and abstracting the parsing of HTTP/1.0 GET requests and responses</li>
+                            <li>The web client, which encompasses the creation of a 
+                            socket and the sending and receiving of HTTP requests via 
+                            this socket.</li>
+                            <li>The web server, which hosts files in a given directory
+                            (on a plausible network hostname and port of the 
+                            user’s choice) and accepts multiple incoming connections 
+                            from multiple web clients.</li>
+                        </ul>
                     </div>
                 </section>
                 

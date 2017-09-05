@@ -288,8 +288,9 @@ main .about .bio .bio-footer p {
 main .projects .proj-item {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     border-bottom: 1px solid #536871;
+    padding-bottom: 1em;
 }
 
 main .projects .proj-item .proj-icon {
@@ -301,6 +302,8 @@ main .projects .proj-item .proj-icon img {
     margin: auto;
     width: 100%;
     max-width: 256px;
+    margin-bottom: 1em;
+    border-radius: 1em;
 }
 
 main .projects .proj-item .proj-desc {
@@ -310,6 +313,7 @@ main .projects .proj-item .proj-desc {
 
 main .projects .proj-item .proj-desc h2 {
     color: #bb3700;
+    margin-top: 0;
 }
 
 main .projects .proj-item .proj-desc h1 {
