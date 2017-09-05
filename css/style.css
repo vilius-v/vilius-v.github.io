@@ -126,7 +126,7 @@ nav .items label:hover {
 }
 
 
-/* MENU NAVIGATION  & RESPONSIVE CSS */
+/* MENU NAVIGATION */
 
 input[type=radio] {
     display: none;
@@ -140,8 +140,11 @@ input[type=radio] {
     color: white;
 }
 
+
+/* RESPONSIVE CSS */
+
 /* Resizes menu according to window size */
-@media (max-width: 70em) {
+@media (max-width: 1100px) {
     header {
         width: 100%;
     }
@@ -153,7 +156,7 @@ input[type=radio] {
     header .wrapper .col-left img {
         display: none;
     }
-    /* Resizes header padding to make left column bigger */
+    /* Changes header padding to make left column bigger */
     header {
         padding: 1.2em 0;
     }
@@ -172,23 +175,31 @@ input[type=radio] {
         font-size: 0.8em;
     }
     
-    /* Changes nav items on resize */
+    /* Changes nav items */
     nav {
         width: 100%;
     }
     nav .items {
-        max-width: 90%;
+        max-width: 65%;
     }
     nav .items label {
         font-size: 1.1em;
     }
     
-    /* Changes content width on resize */
+    /* Changes content width */
     main .content {
-        width: 95% !important;
+        width: 90% !important;
     }
     
-    /* Changes about content on resize */
+    /* Changes footer */
+    footer p {
+        font-size: 2vw;
+    }
+}
+
+/* Resizes content according to window size */
+@media (max-width: 800px) {
+    /* Changes about content */
     main .about .bio {
         float: none !important;
         display: block !important;
@@ -203,7 +214,7 @@ input[type=radio] {
         border-bottom-right-radius: 0.4em;
     }
     
-    /* Changes projects content on resize */
+    /* Changes projects content */
     main .projects .proj-item .proj-icon {
         display: none;
     }
@@ -309,6 +320,10 @@ main .projects .proj-item .proj-icon img {
     max-width: 256px;
     margin-bottom: 1em;
     border-radius: 1em;
+}
+
+main .projects .proj-item .proj-desc img {
+    display: none;
 }
 
 main .projects .proj-item .proj-desc {
