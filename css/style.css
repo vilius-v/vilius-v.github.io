@@ -109,7 +109,7 @@ nav .items label {
     cursor: pointer;
 
     font-family: default-mono;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #586e75;
     text-decoration: none;
     
@@ -193,7 +193,7 @@ input[type=radio] {
     
     /* Changes footer */
     footer p {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 }
 
@@ -221,6 +221,10 @@ input[type=radio] {
     main .projects .proj-item .proj-desc {
         width: 100% !important;
         margin: 0 !important;
+    }
+    /* Changes footer */
+    footer p {
+        font-size: 2vw;
     }
 }
 
